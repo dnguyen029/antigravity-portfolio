@@ -1,0 +1,12 @@
+# Ignore node_modules, virtual environments, build directories, git history, and metadata folders
+node_modules/
+.venv/
+.git/
+.agents/
+.gcloud/
+dist/
+__pycache__/
+**/agent_live.md
+production_artifacts/
+
+
