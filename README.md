@@ -17,7 +17,7 @@ A production-grade AI systems portfolio showcasing an end-to-end agentic enginee
 
 1. **The Multi-Agent Swarm SDK**: A development system built inside Google Antigravity IDE and packaged into a Python SDK to automate coding, security audits, and testing with strict human approval gates.  
    *Live Repository*: **[github.com/dnguyen029/antigravity-sdk](https://github.com/dnguyen029/antigravity-sdk)**
-2. **The Voice AI Receptionist**: A live 24/7 customer support phone assistant built using the Swarm SDK and deployed to Google Cloud Run to answer calls, track orders, and capture leads in real time.  
+2. **The Voice AI Receptionist**: A live 24/7 customer support phone assistant built using the Google Agents ADK/CLI and deployed to Google Cloud Run to answer calls, track orders, and capture leads in real time.  
    *Live Repository*: **[github.com/dnguyen029/receptionist-template](https://github.com/dnguyen029/receptionist-template)**
 
 ---
