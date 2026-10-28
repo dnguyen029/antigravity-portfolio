@@ -35,7 +35,7 @@ A production-grade AI systems portfolio showcasing an end-to-end agentic enginee
 
 ## System 1 — Multi-Agent Conversational Receptionist
 
-A standalone, decoupled AI receptionist handling inbound customer contacts for headless digital storefronts and enterprise backends. The system classifies caller intent in real time and routes to a specialized subagent via the **Agents CLI** and **A2A (Agent-to-Agent)** framework—without ever disclosing it's an AI.
+A standalone, decoupled AI receptionist handling inbound customer contacts for headless digital storefronts and enterprise backends. The system classifies caller intent in real time and routes to a specialized subagent via the **Agents CLI** and **A2A (Agent-to-Agent)** framework—without ever exposing the hand off.
 
 * **Live Repository**: [github.com/dnguyen029/receptionist-template](https://github.com/dnguyen029/receptionist-template)
 
