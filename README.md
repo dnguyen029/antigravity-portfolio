@@ -104,8 +104,12 @@ flowchart TD
     RCAGate -->|"Yes"| ApprovalGate["User Approval Gate<br/>Mandatory Human Sign-Off"]
     
     ApprovalGate -->|"Approved + SHA-256 Lock"| Builder["Builder Agent<br/>Lead Developer<br/>Doc-Grounded Code Synthesis"]
-    Builder --> PostTool["PostToolUse Hook<br/>Ruff Format, Link Audit & Targeted Pytest"]
-    PostTool --> Auditor["Auditor Agent<br/>Security & QA Compliance Audit"]
+    Builder --> PreTool{"PreToolUse Hook<br/>Doc Lookup, Plan Hash & Safety Valid?"}
+    PreTool -->|"Denied (Backoff)"| Escalation(["Halt & Escalate to User"])
+    PreTool -->|"Allowed"| PostTool{"PostToolUse Hook<br/>Ruff Lint, Link Audit & Pytest Pass?"}
+    PostTool -->|"Fail (Under 3 Strikes)"| Builder
+    PostTool -->|"Fail (3 Strikes)"| Rollback["Automated Git Rollback<br/>Restore Clean State"] --> Escalation
+    PostTool -->|"Pass"| Auditor["Auditor Agent<br/>Security & QA Compliance Audit"]
     Auditor --> SRE["SRE / Admin Agent<br/>Environment Alignment & Runtime Verification"]
     SRE --> Librarian["Librarian Agent & Stop Hook<br/>Walkthrough Generation & Supabase Archival"]
 ```
