@@ -23,20 +23,20 @@ graph TD
 
 ## 📁 File Registry
 
-All files relevant to the Receptionist system are organized below:
+All production implementation files are maintained in the **[receptionist-template](https://github.com/dnguyen029/receptionist-template)** repository:
 
 ### 1. Agent Directives (Prompts)
 
-* **[After Hours Receptionist](file:///app_build/receptionist/app/agents/receptionist.txt)**: Prompt instructing lead-capture behavior.
-* **[Router Agent](file:///app_build/receptionist/app/agents/router.txt)**: Prompt for intent classification and subagent delegation.
-* **[FAQ Receptionist](file:///app_build/receptionist/app/agents/faq_receptionist.txt)**: Prompt for answering product/brand specifications.
-* **[WISMO Receptionist](file:///app_build/receptionist/app/agents/wismo_receptionist.txt)**: Prompt for PO lookup and ticket status check.
+* **[After Hours Receptionist](https://github.com/dnguyen029/receptionist-template/blob/main/app/agents/receptionist.txt)**: Prompt instructing lead-capture behavior.
+* **[Router Agent](https://github.com/dnguyen029/receptionist-template/blob/main/app/agents/router.txt)**: Prompt for intent classification and subagent delegation.
+* **[FAQ Receptionist](https://github.com/dnguyen029/receptionist-template/blob/main/app/agents/faq_receptionist.txt)**: Prompt for answering product/brand specifications.
+* **[WISMO Receptionist](https://github.com/dnguyen029/receptionist-template/blob/main/app/agents/wismo_receptionist.txt)**: Prompt for PO lookup and ticket status check.
 
 ### 2. Integration Tools & Code
 
-* **[Lead Logger (Sheets)](file:///app_build/receptionist/app/tools_lib/sheets.py)**: Python tool handling lead uploads to Google Sheets.
-* **[Zendesk Integration](file:///app_build/receptionist/app/tools_lib/zendesk.py)**: Python tool handling Zendesk ticket searches, updates, and creation.
-* **[Execution Entrypoint](file:///app_build/receptionist/app/tools.py)**: Python tools wrapper routing lead logging and WISMO lookup.
+* **[Lead Logger (Sheets)](https://github.com/dnguyen029/receptionist-template/blob/main/app/tools_lib/sheets.py)**: Python tool handling lead uploads to Google Sheets.
+* **[Zendesk Integration](https://github.com/dnguyen029/receptionist-template/blob/main/app/tools_lib/zendesk.py)**: Python tool handling Zendesk ticket searches, updates, and creation.
+* **[Execution Entrypoint](https://github.com/dnguyen029/receptionist-template/blob/main/app/tools.py)**: Python tools wrapper routing lead logging and WISMO lookup.
 
 ---
 
@@ -83,9 +83,9 @@ All captured session parameters must conform to the following properties before 
 
 To ensure a high-quality call experience, all receptionist prompts must enforce these constraints:
 
-1. **Strict Response Limit**: Maximum of **40 words** per response to maintain low latency.
-2. **One Question at a Time**: Never ask the caller for multiple details in a single response.
+1. **Concise Response Budget**: Maximum of **40 words** per response to maintain low latency.
+2. **One Question at a Time**: Ask the caller for one detail per turn.
 3. **Mandatory Readback Verification**: You MUST read back both the phone number and the email address, confirming they are correct before calling logging tools.
 4. **Single-Shot Logging**: Collect all required user details before invoking the Lead Logger tool.
-5. **No AI Identity Disclosures**: Never mention being an AI or a bot; maintain the virtual assistant persona.
+5. **Transparent AI Disclosure & Seamless Subagent Handoffs**: Clearly disclose AI assistant identity at the start of the call while keeping internal routing and handoffs between specialist subagents seamless and unannounced.
 6. **Website Referral fallback**: Refer callers seeking deep technical specs or complex policies to your company's website.

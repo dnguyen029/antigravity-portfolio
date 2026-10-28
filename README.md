@@ -13,12 +13,12 @@ Santa Ana, CA | [LinkedIn](https://linkedin.com/in/davidnguyen029) | [GitHub](ht
 
 ---
 
-A production-grade AI systems portfolio showcasing an end-to-end agentic engineering lifecycle built with **Google Antigravity**:
+> **Portfolio & Architecture Overview**: This repository serves as the central architecture overview and documentation hub for my AI engineering projects. Rather than hosting duplicate or stubbed code here, the complete, runnable, and unit-tested source code is maintained in the dedicated repositories linked below:
 
-1. **The Multi-Agent Orchestration SDK**: A development harness built inside Google Antigravity IDE and packaged into a Python SDK to coordinate coding, security audits, and testing with human approval gates.  
-   *Live Repository*: **[github.com/dnguyen029/antigravity-sdk](https://github.com/dnguyen029/antigravity-sdk)**
-2. **The Voice AI Receptionist**: A live 24/7 customer support phone assistant built using the Google Agents ADK/CLI and deployed to Google Cloud Run to answer calls, track orders, and capture leads in real time.  
-   *Live Repository*: **[github.com/dnguyen029/receptionist-template](https://github.com/dnguyen029/receptionist-template)**
+1. **The Multi-Agent Orchestration SDK**: A development harness built inside Google Antigravity IDE and packaged into a Python SDK (`28/28` unit tests) to coordinate coding, security audits, and testing with human approval gates.  
+   *Full Source Repository*: **[github.com/dnguyen029/antigravity-sdk](https://github.com/dnguyen029/antigravity-sdk)**
+2. **The Voice AI Receptionist**: A 24/7 customer support phone assistant built using the Google Agents ADK/CLI (`38/38` unit tests, `84.6%` coverage) and deployed to Google Cloud Run to answer calls, track orders, and capture leads in real time.  
+   *Full Source Repository*: **[github.com/dnguyen029/receptionist-template](https://github.com/dnguyen029/receptionist-template)**
 
 ---
 
@@ -35,7 +35,7 @@ A production-grade AI systems portfolio showcasing an end-to-end agentic enginee
 
 ## System 1 — Multi-Agent Conversational Receptionist
 
-A standalone, decoupled AI receptionist handling inbound customer contacts for headless digital storefronts and commerce backends. The system classifies caller intent in real time and routes to a specialized subagent via the **Agents CLI** and **A2A (Agent-to-Agent)** framework while keeping subagent handoffs seamless to the caller.
+A standalone, decoupled AI receptionist handling inbound customer contacts for headless digital storefronts and commerce backends. The system transparently discloses that the caller is speaking with an AI assistant at greeting, then classifies caller intent in real time and routes between specialized subagents via the **Agents CLI** and **A2A (Agent-to-Agent)** framework without announcing or exposing internal handoffs to the caller.
 
 * **Live Repository**: [github.com/dnguyen029/receptionist-template](https://github.com/dnguyen029/receptionist-template)
 
@@ -189,34 +189,6 @@ Production Next.js web applications architected, implemented, and verified using
 | **David Nguyen — Portfolio** | [david-nguyen-bay.vercel.app](https://david-nguyen-bay.vercel.app/) | Interactive Next.js portfolio showcasing AI systems architecture, headless commerce integrations, and technical operations. |
 | **Sports Matrix Analytics** | [dashboard-five-tan-52.vercel.app](https://dashboard-five-tan-52.vercel.app/) | Real-time sports analytics and market line-movement dashboard backed by Supabase PostgREST, Cloud Run pollers, and Next.js App Router. |
 | **Multi-Agent Agency Platform** | [swarm-agency.vercel.app](https://swarm-agency.vercel.app/) | Next.js web showcase demonstrating multi-agent software engineering workflows and AI automation services. |
-
----
-
-## Repository Structure
-
-```text
-antigravity-portfolio/
-├── native_orchestrator.py       # SDK-native Multi-Agent Orchestration Engine 
-├── RECEPTIONIST_SOP.md          # Architecture, endpoints, and data schema SOP
-├── pyrightconfig.json           # Type checking configuration
-└── app_build/
-    └── receptionist/
-        └── app/
-            ├── agent.py                 # ADK multi-agent routing topology 
-            ├── agent_runtime_app.py     # FastAPI server deployment entrypoint 
-            ├── tools.py                 # Tool declarations and bindings 
-            └── tools_lib/
-                ├── sheets.py            # Google Sheets client interface
-                └── zendesk.py           # Zendesk REST API client interface
-```
-
----
-
-## Project Operations & Architecture Scope
-
-This repository is a portfolio showcase containing stubs and interfaces of the production codebases. To run the full system in a production environment, refer to the private operational repositories.
-
-**Environment**: Design patterns conform to the Google Antigravity 2.0 SDK and Google Agents SDK (ADK) interfaces.
 
 ---
 
