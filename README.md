@@ -27,7 +27,7 @@ A production-grade AI systems portfolio showcasing an end-to-end agentic enginee
 | Business Challenge | AI Solution Implemented | Operational Impact |
 | :--- | :--- | :--- |
 | **Missed After-Hours Inquiries** | Autonomous voice receptionist answers calls 24/7 with pluggable CRM/Database dispatching. | Zero dropped leads; automatic real-time ticket sync into **Zendesk, HubSpot, Salesforce, Airtable, or Google Sheets**. |
-| **High Support Ticket Volume** | Self-service order lookup (WISMO) integrated with **Shopify, Medusa, or custom ERPs**. | Deflects ~40% of repetitive tracking calls; enforces **Two-Factor Verification** to protect customer data. |
+| **High Support Ticket Volume** | Self-service order lookup (WISMO) integrated with **Shopify, Medusa, or custom ERPs**. | Deflects ~70% of repetitive tracking calls; enforces **Two-Factor Verification** to protect customer data. |
 | **Unreliable LLM Code Generation** | Multi-agent engineering swarm with strict **Human-in-the-Loop Approval Gates**. | Code modifications require an approved Root Cause Analysis (RCA) and user sign-off before modifying files. |
 | **Conversational Latency** | Low-latency audio streaming optimized with a **<40-word turn budget**. | Natural spoken conversation cadence without awkward pauses or robotic monologue. |
 
