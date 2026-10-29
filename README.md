@@ -182,7 +182,7 @@ To reduce context window consumption and inference costs during multi-turn agent
 
 ## Live Next.js Web Applications
 
-Production Next.js web applications architected, implemented, and verified using the Antigravity 2.0 multi-agent harness (`Context7` & `Google Modern Web Guidance`):
+Next.js web applications architected, implemented, and verified using the Antigravity 2.0 multi-agent harness (`Context7` & `Google Modern Web Guidance`):
 
 | Application | Live Deployment | Architecture & Capabilities |
 | :--- | :--- | :--- |
